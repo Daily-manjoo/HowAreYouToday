@@ -1,0 +1,111 @@
+body {
+  width: 1500px;
+  background-color: antiquewhite;
+}
+
+.layout {
+  height: 130px;
+  background-color: skyblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  flex: 1;
+  /* Adjust flex as needed for the menu */
+}
+
+.fi-br-menu-burger {
+  font-size: 30px;
+}
+
+.logo {
+  flex: 2;
+  /* Adjust flex as needed for the logo */
+}
+
+.search-box {
+  flex: 1;
+  /* Adjust flex as needed for the search box */
+}
+
+.search-button {
+  flex: 1;
+}
+
+.user-actions {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login,
+.register {
+  width: calc(50% - 5px); /* Subtracting 5 pixels for margin between login and register */
+  /* Adjust width as needed for login and registration buttons */
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.event-banner {
+  display: flex;
+}
+
+.banner-image {
+  max-width: 100%;
+  height: auto;
+  min-height: 600px;
+}
+
+.bannerImage {
+  width: 100%;
+}
+
+.new-title {
+  display: flex;
+  padding: 40px 50px;
+}
+
+.new-item-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+
+.new-item-list {
+  width: 100%;
+  height: 400px;
+  list-style: none;
+  display: flex;
+}
+
+.new-item {
+  width: 250px;
+  height: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.new-item a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+}
+
+.new-item img {
+  background-color: aquamarine;
+  width: 100%;
+  height: 400px;
+}
