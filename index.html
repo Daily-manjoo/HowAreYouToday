@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+
     <title>HowAreYouToday?</title>
   </head>
   <body>
@@ -30,8 +33,12 @@
 
     <div class="new-title">NEW</div>
 
-    <div class="new-item-box">
-      <ul class="new-item-list">
+    <div class="new-item-box carousel-container">
+      <div class="carousel-buttons">
+        <i id="prev" class="fi fi-rr-arrow-left"></i>
+        <i id="next" class="fi fi-rr-arrow-right"></i>
+      </div>
+      <ul id="carousel" class="new-item-list carousel-list" style="-webkit-padding-start: 0px;">
         <li class="new-item">
           <a href="#">
             <img src="./images/newlist3.jpg" alt="newproduct">
@@ -63,7 +70,42 @@
             <span class="price">가격</span>
           </a>
         </li>
+
+        <li class="new-item nextItem">
+          <a href="#">
+            <img src="./images/newlist1.jpg" alt="newproduct">
+            <span class="name">이름</span>
+            <span class="price">가격</span>
+          </a>
+        </li>
+
+        <li class="new-item nextItem">
+          <a href="#">
+            <img src="./images/newlist2.jpg" alt="newproduct">
+            <span class="name">이름</span>
+            <span class="price">가격</span>
+          </a>
+        </li>
+
+        <li class="new-item nextItem">
+          <a href="#">
+            <img src="./images/newlist3.jpg" alt="newproduct">
+            <span class="name">이름</span>
+            <span class="price">가격</span>
+          </a>
+        </li>
+
+        <li class="new-item nextItem">
+          <a href="#">
+            <img src="./images/newlist4.jpg" alt="newproduct">
+            <span class="name">이름</span>
+            <span class="price">가격</span>
+          </a>
+        </li>
       </ul>
+      
     </div>
+
+    <script src="./index.js"></script>
   </body>
 </html>
