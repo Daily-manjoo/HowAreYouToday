@@ -83,6 +83,7 @@ body {
   list-style: none;
   display: flex;
   margin-left: 100px;
+  transition: left 0.5s ease-out;
 }
 
 .new-item {
