@@ -1,7 +1,7 @@
 body {
-  width: 1500px;
   background-color: antiquewhite;
   margin: 0;
+  width: 1500px;
 }
 
 .layout {
@@ -73,19 +73,19 @@ body {
 .new-item-box {
   display: flex;
   align-items: center;
-  justify-content: center;
   min-height: 400px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 
 .new-item-list {
-  width: 1500px;
   list-style: none;
   display: flex;
-  margin-left: 200px;
+  margin-left: 100px;
 }
 
 .new-item {
-  width: 250px;
   height: 500px;
   background-color: white;
   display: flex;
@@ -115,18 +115,12 @@ body {
   height: 400px;
 }
 
-.carousel-container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
 .fi {
   position: absolute;
   font-size: 40px;
   color: saddlebrown;
   cursor: pointer;
-  padding: 10px 20px;
+  padding: 0px 20px;
 }
 
 .fi-rr-arrow-left {
