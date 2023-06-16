@@ -15,7 +15,7 @@ function moveSlide(num) {
 }
 
 nextBtn.addEventListener("click", function () {
-  if (currentIdx < slideCount - 3) {
+  if (currentIdx < slideCount - 4) {
     moveSlide(currentIdx + 1);
   } else {
     moveSlide(0);
@@ -26,6 +26,6 @@ prevBtn.addEventListener("click", function () {
   if (currentIdx > 0) {
     moveSlide(currentIdx - 1);
   } else {
-    moveSlide(currentIdx < slideCount - 3);
+    moveSlide(currentIdx < slideCount - 4);
   }
 });

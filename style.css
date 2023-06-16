@@ -73,7 +73,7 @@ body {
 .new-item-box {
   display: flex;
   align-items: center;
-  min-height: 400px;
+  min-height: 600px;
   position: relative;
   width: 100%;
   overflow: hidden;
@@ -82,6 +82,9 @@ body {
 .new-item-list {
   list-style: none;
   display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
   margin-left: 100px;
   transition: left 0.5s ease-out;
 }
@@ -122,6 +125,7 @@ body {
   color: saddlebrown;
   cursor: pointer;
   padding: 0px 20px;
+  z-index: 9;
 }
 
 .fi-rr-arrow-left {
@@ -130,4 +134,12 @@ body {
 
 .fi-rr-arrow-right {
   right: 10px;
+}
+
+footer.box {
+  height: 200px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
