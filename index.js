@@ -10,7 +10,7 @@ var slides = document.querySelector(".new-item-list"),
 slides.style.width = (slideWidth + slideMargin) * slideCount - slideMargin + "px";
 
 function moveSlide(num) {
-  slides.style.left = -num * 330 + "px";
+  slides.style.left = -num * 350 + "px";
   currentIdx = num;
 }
 
@@ -26,6 +26,6 @@ prevBtn.addEventListener("click", function () {
   if (currentIdx > 0) {
     moveSlide(currentIdx - 1);
   } else {
-    moveSlide(currentIdx < slideCount - 4);
+    moveSlide(slideCount - 5);
   }
 });

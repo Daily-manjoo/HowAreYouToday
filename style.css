@@ -120,7 +120,6 @@ body {
 }
 
 .fi {
-  position: absolute;
   font-size: 40px;
   color: saddlebrown;
   cursor: pointer;
@@ -142,4 +141,5 @@ footer.box {
   text-align: center;
   justify-content: center;
   align-items: center;
+  padding: 0px 100px;
 }
