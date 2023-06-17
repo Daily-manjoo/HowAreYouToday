@@ -51,6 +51,10 @@ body {
   align-items: center;
 }
 
+.header-nav {
+  text-decoration: none;
+}
+
 .event-banner {
   display: flex;
 }
@@ -127,11 +131,8 @@ body {
   z-index: 9;
 }
 
-.fi-rr-arrow-left {
-  left: 10px;
-}
-
 .fi-rr-arrow-right {
+  position: absolute;
   right: 10px;
 }
 
