@@ -17,8 +17,53 @@ body {
   /* Adjust flex as needed for the menu */
 }
 
-.fi-br-menu-burger {
-  font-size: 30px;
+input[id="menuicon"] {
+  display: none;
+}
+
+input[id="menuicon"] + label {
+  display: none;
+  width: 60px;
+  height: 40px;
+  position: relative;
+  cursor: pointer;
+}
+
+input[id="menuicon"] + label + span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  border-radius: 30px;
+  background-color: #000;
+  transition: all 0.35s;
+}
+
+input[id="menuicon"] + label + span:nth-child(1) {
+  top: 0;
+}
+
+input[id="menuicon"] + label + span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[id="menuicon"] + label + span:nth-child(3) {
+  bottom: 0;
+}
+
+input[id="menuicon"]:checked + label + span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked + label + span:nth-child(2) {
+  opacity: 0;
+}
+
+input[id="menuicon"]:checked + label + span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
 }
 
 .logo {
