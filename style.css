@@ -75,10 +75,58 @@ input[id="menuicon"]:checked + label span:nth-child(3) {
   height: 80%;
   background: #222;
   position: fixed;
+  display: flex;
+  flex-direction: column;
   top: 0;
   left: -300px;
   z-index: 1;
   transition: all 0.35s;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-nav {
+  position: relative;
+  top: 10%;
+}
+
+.category {
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+}
+
+.sidebar-nav .category > li {
+  font-size: 17px;
+  list-style: none;
+  margin-right: 10px;
+  letter-spacing: 1px;
+}
+
+.sidebar-nav .category > li:nth-child(4) {
+  margin-right: 0;
+}
+
+.sidebar-nav .category > li > a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.category-list {
+  list-style: none;
+  padding: 30px 0 0 0px;
+}
+
+.category-list > li {
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.category-list > li > a {
+  text-decoration: none;
+  color: aliceblue;
 }
 
 input[id="menuicon"]:checked + label + div {
