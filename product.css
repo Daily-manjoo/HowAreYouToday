@@ -1,0 +1,258 @@
+body {
+  background-color: antiquewhite;
+  margin: 0;
+  width: 1500px;
+}
+
+.layout {
+  height: 130px;
+  background-color: skyblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu {
+  flex: 1;
+  position: relative;
+}
+
+input[id="menuicon"] {
+  display: none;
+}
+
+input[id="menuicon"] + label {
+  display: block;
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+input[id="menuicon"] + label span {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  border-radius: 30px;
+  background-color: #fff;
+  transition: all 0.35s;
+}
+
+input[id="menuicon"] + label span:nth-child(1) {
+  top: 0;
+}
+
+input[id="menuicon"] + label span:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[id="menuicon"] + label span:nth-child(3) {
+  bottom: 0;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(1) {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+
+input[id="menuicon"]:checked + label span:nth-child(2) {
+  opacity: 0;
+}
+
+input[id="menuicon"]:checked + label span:nth-child(3) {
+  bottom: 50%;
+  transform: translateY(50%) rotate(-45deg);
+}
+
+.sidebar {
+  width: 250px;
+  height: 80%;
+  background: #222;
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  top: 0;
+  left: -300px;
+  z-index: 1;
+  transition: all 0.35s;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.sidebar-nav {
+  position: relative;
+  top: 10%;
+}
+
+.category {
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+}
+
+.sidebar-nav .category > li {
+  font-size: 17px;
+  list-style: none;
+  margin-right: 10px;
+  letter-spacing: 1px;
+}
+
+.sidebar-nav .category > li:nth-child(4) {
+  margin-right: 0;
+}
+
+.sidebar-nav .category > li > a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.category-list {
+  list-style: none;
+  padding: 30px 0 0 0px;
+}
+
+.category-list > li {
+  text-align: center;
+  margin-bottom: 40px;
+  letter-spacing: 1px;
+}
+
+.category-list > li > a {
+  text-decoration: none;
+  color: aliceblue;
+}
+
+input[id="menuicon"]:checked + label + div {
+  left: 0;
+}
+
+.logo {
+  flex: 2;
+  /* Adjust flex as needed for the logo */
+}
+
+.search-box {
+  flex: 1;
+  /* Adjust flex as needed for the search box */
+}
+
+.search-button {
+  flex: 1;
+}
+
+.user-actions {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.login,
+.register {
+  width: calc(50% - 5px); /* Subtracting 5 pixels for margin between login and register */
+  /* Adjust width as needed for login and registration buttons */
+  margin-left: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-nav {
+  text-decoration: none;
+}
+
+.event-banner {
+  display: flex;
+}
+
+.banner-image {
+  max-width: 100%;
+  height: auto;
+  min-height: 600px;
+}
+
+.bannerImage {
+  width: 100%;
+}
+
+.new-title {
+  display: flex;
+  padding: 40px 50px;
+}
+
+.new-item-box {
+  display: flex;
+  align-items: center;
+  min-height: 600px;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.new-item-list {
+  list-style: none;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-left: 100px;
+  transition: left 0.5s ease-out;
+}
+
+.new-item {
+  height: 500px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-right: 100px;
+}
+
+.new-item:last-child {
+  margin-right: 0;
+}
+
+.new-item a {
+  width: 250px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-decoration: none;
+}
+
+.new-item img {
+  background-color: aquamarine;
+  width: 250px;
+  height: 400px;
+}
+
+.fi {
+  font-size: 40px;
+  color: saddlebrown;
+  cursor: pointer;
+  padding: 0px 20px;
+  z-index: 9;
+}
+
+.fi-rr-arrow-right {
+  position: absolute;
+  right: 10px;
+}
+
+footer.box {
+  height: 200px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 100px;
+}

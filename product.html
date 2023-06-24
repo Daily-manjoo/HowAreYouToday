@@ -4,7 +4,202 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Document</title>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-bold-rounded/css/uicons-bold-rounded.css'>
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+
+
+    <title>HowAreYouToday?</title>
   </head>
-  <body></body>
+  <body>
+    <header class="layout">
+        <div class="menu">
+            <input type="checkbox" id="menuicon">
+            <label for="menuicon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+            <div class="sidebar">
+              <nav class="sidebar-nav">
+                <ul class="category">
+                  <li>
+                    <a href="#">
+                      <span>여성</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <span>남성</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <span>키즈</span>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <span>ACC</span>
+                    </a>
+                  </li>
+                </ul>
+
+                <ul class="category-list">
+                <li>
+                  <a href="#">
+                    <span>신상</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span>모자</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span>상의</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span>하의</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span>원피스</span>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <span>신발</span>
+                  </a>
+                </li>
+              </ul>
+              </nav>
+
+              
+            </div>
+        </div>
+        <div class="logo">Logo</div>
+        <div class="search-box">
+            <input type="text" class="searchBar" value="검색하기">
+            <button class="button-box">검색</button>
+        </div>
+        <div class="user-actions">
+          <div class="login">
+            <a class="header-nav" href="./login.html">
+              <span>Login</span>
+            </a>
+          </div>
+          <div class="register">
+            <a class="header-nav" href="./weather.html">
+              <span>Register</span>
+            </a>
+            </div>
+    </header>
+
+    
+
+    <section class="event-banner">
+      <div class="banner-image">
+        <img class="bannerImage" src="./images/mainbanner.jpg" alt="mainimage">
+      </div>
+    </section>
+
+    <div class="new-title">NEW</div>
+
+    <div class="new-item-box">
+      <div class="carousel-buttons">
+        <i id="prev" class="fi fi-rr-arrow-left"></i>
+        <i id="next" class="fi fi-rr-arrow-right"></i>
+      </div>
+      <ul class="new-item-list" style="-webkit-padding-start: 0px;">
+        <li class="new-item">
+          <a href="#">
+            <img src="./images/newlist1.jpg" alt="newproduct">
+            <span class="name">이름</span>
+            <span class="price">가격</span>
+          </a>
+        </li>
+
+        <li class="new-item">
+          <a href="#">
+            <img src="./images/newlist2.jpg" alt="newproduct">
+            <span class="name">이름</span>
+            <span class="price">가격</span>
+          </a>
+        </li>
+
+        <li class="new-item">
+          <a href="#">
+            <img src="./images/newlist3.jpg" alt="newproduct">
+            <span class="name">이름</span>
+            <span class="price">가격</span>
+          </a>
+        </li>
+
+        <li class="new-item">
+          <a href="#">
+            <img src="./images/newlist4.jpg" alt="newproduct">
+            <span class="name">이름</span>
+            <span class="price">가격</span>
+          </a>
+        </li>
+
+        <li class="new-item">
+          <a href="#">
+            <img src="./images/newlist5.jpg" alt="newproduct">
+            <span class="name">이름</span>
+            <span class="price">가격</span>
+          </a>
+        </li>
+
+        <li class="new-item">
+          <a href="#">
+            <img src="./images/newlist6.jpg" alt="newproduct">
+            <span class="name">이름</span>
+            <span class="price">가격</span>
+          </a>
+        </li>
+
+        <li class="new-item">
+          <a href="#">
+            <img src="./images/newlist7.jpg" alt="newproduct">
+            <span class="name">이름</span>
+            <span class="price">가격</span>
+          </a>
+        </li>
+
+        <li class="new-item">
+          <a href="#">
+            <img src="./images/newlist8.jpg" alt="newproduct">
+            <span class="name">이름</span>
+            <span class="price">가격</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <footer class="box">
+      <div class="inner-info">
+        무한상사 유한회사 | 사업자등록번호: 123-45-67890 | 대표자 : 조유리 | 경기도 안산시 행복구 로또로 (당첨동 100층) |  대표번호: 070-000-0000  |  호스팅 서비스 사업자: ZEROBASE  |  통신판매업신고 : 제2023-경기안산-00000 
+      </div>
+
+      <div class="hi">
+        <span>날씨 :</span>
+        <span>지역 :</span>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
 </html>
