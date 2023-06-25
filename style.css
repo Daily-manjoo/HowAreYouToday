@@ -138,6 +138,10 @@ input[id="menuicon"]:checked + label + div {
   /* Adjust flex as needed for the logo */
 }
 
+.logo a {
+  text-decoration: none;
+}
+
 .search-box {
   flex: 1;
   /* Adjust flex as needed for the search box */
