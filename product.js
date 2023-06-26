@@ -45,3 +45,17 @@ fetch("https://fakestoreapi.com/products")
   .catch((error) => {
     console.log("Error:", error);
   });
+
+//아래부터 필터기능 //
+
+// Assuming 'products' is the array of product objects loaded from the JSON file
+
+// Filter by product name
+function filterByName(name) {
+  return products.filter((product) => product.name.toLowerCase().includes(name.toLowerCase()));
+}
+
+// Filter by price range
+function filterByPrice(minPrice, maxPrice) {
+  return products.filter((product) => product.price >= minPrice && product.price <= maxPrice);
+}
