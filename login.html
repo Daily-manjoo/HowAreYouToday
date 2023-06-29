@@ -26,11 +26,12 @@
       // Import the functions you need from the SDKs you need
       import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
       import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
+
       // TODO: Add SDKs for Firebase products that you want to use
       // https://firebase.google.com/docs/web/setup#available-libraries
 
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      // Initialize Firebase
+
       const firebaseConfig = {
         apiKey: "AIzaSyDmcsbLk3iQ9aFRgPXWQBqyIgnuvcGt9Vo",
         authDomain: "howareyoutoday-fcb8c.firebaseapp.com",
@@ -41,7 +42,6 @@
         measurementId: "G-36S480MPJV",
       };
 
-      // Initialize Firebase
       const app = initializeApp(firebaseConfig);
       const analytics = getAnalytics(app);
 
@@ -52,6 +52,14 @@
       } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 
       const auth = getAuth();
+      const user = auth.currentUser;
+      if (user !== null) {
+        const displayName = user.displayName;
+        const userEmail = user.email;
+        const photoURL = user.photoURL;
+        const emailVerified = user.emailVerified;
+        const uid = user.uid;
+      }
 
       document
         .getElementById("signUpButton")
@@ -64,7 +72,7 @@
           createUserWithEmailAndPassword(auth, signUpEmail, signUpPassword)
             .then((userCredential) => {
               console.log(userCredential);
-              // Signed in
+              // Signed up
               const user = userCredential.user;
               // ...
             })
@@ -88,7 +96,7 @@
               console.log(userCredential);
               // Signed in
               const user = userCredential.user;
-              // ...
+              sessionStorage.setItem("user", JSON.stringify(user));
               window.location.href = "index.html";
             })
             .catch((error) => {

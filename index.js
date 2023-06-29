@@ -7,7 +7,8 @@ var slides = document.querySelector(".new-item-list"),
   slideMargin = 100,
   nextBtn = document.querySelector("#next");
 
-slides.style.width = (slideWidth + slideMargin) * slideCount - slideMargin + "px";
+slides.style.width =
+  (slideWidth + slideMargin) * slideCount - slideMargin + "px";
 
 function moveSlide(num) {
   slides.style.left = -num * 350 + "px";
@@ -30,6 +31,10 @@ prevBtn.addEventListener("click", function () {
   }
 });
 
+//회원정보
+const user = JSON.parse(sessionStorage.getItem("user"));
+console.log(user);
+
 //아래부터 날씨api
 
 const savedWeatherData = JSON.parse(localStorage.getItem("saved-weather"));
@@ -43,20 +48,36 @@ const createTodo = function (storageData) {
 };
 
 const weatherDataActive = function ({ location, weather }) {
-  const weatherMainList = ["Clear", "Clouds", "Drizzle", "Rain", "Snow", "Thunderstorm"];
+  const weatherMainList = [
+    "Clear",
+    "Clouds",
+    "Drizzle",
+    "Rain",
+    "Snow",
+    "Thunderstorm",
+  ];
   weather = weatherMainList.includes(weather) ? weather : "Fog";
   const locationNameTag = document.querySelector("#location-name-tag");
 
   locationNameTag.textContent = location;
   document.body.style.backgroundImage = `url('./images/${weather}.jpg')`;
 
-  if (!savedWeatherData || savedWeatherData?.location !== location || savedWeatherData?.weather !== weather) {
-    localStorage.setItem("saved-weather", JSON.stringify({ location, weather }));
+  if (
+    !savedWeatherData ||
+    savedWeatherData?.location !== location ||
+    savedWeatherData?.weather !== weather
+  ) {
+    localStorage.setItem(
+      "saved-weather",
+      JSON.stringify({ location, weather })
+    );
   }
 };
 
 const weatherSearch = function ({ latitude, longitude }) {
-  fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid={API Key}`)
+  fetch(
+    `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid={API Key}`
+  )
     .then((res) => {
       return res.json();
     })
