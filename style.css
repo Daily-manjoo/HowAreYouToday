@@ -171,6 +171,10 @@ input[id="menuicon"]:checked + label + div {
   text-decoration: none;
 }
 
+form {
+  text-align: center;
+}
+
 .event-banner {
   display: flex;
 }
