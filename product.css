@@ -228,6 +228,53 @@ input[id="menuicon"]:checked + label + div {
   order: 4;
 }
 
+.active {
+  font-weight: bold;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.pagination ul {
+  list-style: none;
+  display: flex;
+}
+
+.pagination li {
+  margin: 0 5px;
+}
+
+.pagination .page-numb span {
+  padding: 5px 10px;
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.pagination .page-numb.active span {
+  background-color: skyblue;
+  color: white;
+}
+
+.pagination .btn-prev,
+.pagination .btn-next {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.pagination .btn-prev i,
+.pagination .btn-next i {
+  font-size: 20px;
+}
+
+.pagination .btn-prev:hover,
+.pagination .btn-next:hover {
+  color: skyblue;
+}
+
 footer.box {
   height: 200px;
   display: flex;

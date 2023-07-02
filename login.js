@@ -99,5 +99,7 @@ document.getElementById("signInButton").addEventListener("click", (event) => {
       console.log("로그인 실패");
       const errorCode = error.code;
       const errorMessage = error.message;
+      const errorElement = document.getElementById("signInError");
+      errorElement.textContent = "로그인에 실패했습니다. 다시 입력해주세요.";
     });
 });
