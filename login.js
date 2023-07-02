@@ -1,16 +1,20 @@
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signInWithEmailAndPassword,
-  signInWithPopup,
-  GoogleAuthProvider,
-} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-analytics.js";
 
 const firebaseConfig = {
-  // Your Firebase configuration
+  apiKey: "AIzaSyDmcsbLk3iQ9aFRgPXWQBqyIgnuvcGt9Vo",
+  authDomain: "howareyoutoday-fcb8c.firebaseapp.com",
+  projectId: "howareyoutoday-fcb8c",
+  storageBucket: "howareyoutoday-fcb8c.appspot.com",
+  messagingSenderId: "386825384877",
+  appId: "1:386825384877:web:ee132b10d9e4652330e724",
+  measurementId: "G-36S480MPJV",
 };
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
@@ -54,7 +58,8 @@ document.addEventListener("DOMContentLoaded", () => {
           const errorCode = error.code;
           const errorMessage = error.message;
           const errorElement = document.getElementById("signInError");
-          errorElement.textContent = "로그인에 실패했습니다. 다시 입력해주세요.";
+          errorElement.textContent =
+            "로그인에 실패했습니다. 다시 입력해주세요.";
         });
     });
   }
